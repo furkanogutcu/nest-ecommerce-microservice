@@ -1,0 +1,49 @@
+{
+  "name": "nest-ecommerce-microservice",
+  "version": "0.0.0",
+  "description": "Sample e-commerce backend project developed using NestJS and microservices and deployed with Docker",
+  "private": true,
+  "author": "furkanogutcu",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkanogutcu/nest-ecommerce-microservice.git"
+  },
+  "keywords": [
+    "api",
+    "shop",
+    "commerce",
+    "ecommerce",
+    "microservice",
+    "grpc"
+  ],
+  "bugs": {
+    "url": "https://github.com/furkanogutcu/nest-ecommerce-microservice/issues"
+  },
+  "homepage": "https://github.com/furkanogutcu/nest-ecommerce-microservice#readme",
+  "scripts": {
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "test": "turbo run test",
+    "build:check": "turbo run build:check",
+    "commitlint": "commitlint --edit ${1}",
+    "prepare": "node -e \"if (process.env.NODE_ENV !== 'production'){process.exit(1)} \" || husky install",
+    "pre-commit": "npm run lint",
+    "pre-push": "npm run build:check"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.2.0",
+    "@commitlint/config-conventional": "^19.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "husky": "^9.0.11",
+    "turbo": "^1.12.5",
+    "typescript": "^5.4.2"
+  }
+}
